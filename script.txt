@@ -1,3 +1,4 @@
 Teste de branch
 teste da v2.0
+Nova funcionalidade
 
