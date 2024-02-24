@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.conteiner{
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*--------------------header---------------------*/
+.baner{
+  width: 100%;
+  min-height: 40px; /*quando o header quebrar ira aumntar a autura do header*/
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /*quando diminuir fazer a quebra do itens*/
+  padding: 30px;
+  gap: 8px 15px; /*manipulando o gap para que os elemtos não se encostem na responsividade*/
+}
+
+.logoBaner {
+  width: 180px;
+}
+
+.baner .botoes-header{
+  display: flex;
+  gap: 15px; /*aplicando um gap geral*/
+}
+
+.baner .botoes-header .navBtn {
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+}
+.baner .botoes-header .navBtn:hover {
+  border-bottom: 2px solid white;
+}
+
+/*--------------------conteudo---------------------*/
+/*parametros gerais*/
+.sectionTitulo{
+  font-size: 26px;
+  text-align: center;
+  padding-top: 20px ;
+}
+.sectionDescricao{
+  text-align: center;
+  color: #383838;
+}
+
+.section-conteiner { /*conteiner pai do conteudo*/
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "categorias categorias-extras";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+/*class categorias*/
+.section-conteiner .categorias {
+  /*Por herança herdou de section-conteiner o  grid-template-columns: 3fr 1fr; gerando 3 colunas */
+  /*O display flex tem como padrão o row fazendo assim que ocupe 3 itens por linha */
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: categorias;
+}
+
+.section-conteiner .categorias .item {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.section-conteiner .categorias .item:hover {
+  border-color: black;
+}
+
+.section-conteiner .categorias .item .itemImg{
+  width: 100%;
+  height: 180px;
+  border-radius: 10px; /* permite arreondar as bordas do elemento*/
+}
+
+.section-conteiner .categorias .item .itemTitulo {
+  padding: 6px;
+  font-size: 20px;
+}
+
+.section-conteiner .categorias .item .itemDescricao {
+  padding: 6px;
+  font-size: 18px;
+}
+
+/*class categorias-extras*/
+.section-conteiner .categorias-extras {
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  min-width: 300px;
+  grid-area: categorias-extras;
+  gap: 20px;
+}
+
+.section-conteiner .categorias-extras .item-extra {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.section-conteiner .categorias-extras .item-extra:hover {
+  border-color: gainsboro;
+}
+
+.section-conteiner .categorias-extras .item-extra .itemImg-extra{
+  width: 100%;
+  /* height: 100%; (se esse height estiver definido as imagens conbrirão os testos*/
+  border-radius: 10px
+}
+
+/*--------------------rodapé---------------------*/
+.section-conteiner .rodape {
+  width: 100%;
+  min-height: 40px; /*quando o header quebrar ira aumntar a autura do header*/
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /*quando diminuir fazer a quebra do itens*/
+  padding: 30px;
+  gap: 8px 15px; /*manipulando o gap para que os elemtos não se encostem na responsividade*/
+}
+
+.section-conteiner .rodape .logoRodape {
+  width: 180px;
+}
+
+.footerAncora {
+  color: white;
+  transition: 0,5s;
+}
+
+.footerAncora:hover {
+  font-size: 18px;
+  color: red;
+}
