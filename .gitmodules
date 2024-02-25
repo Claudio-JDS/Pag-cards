@@ -1,0 +1,3 @@
+[submodule "submodule-pagCards"]
+	path = submodule-pagCards
+	url = https://github.com/Claudio-JDS/submodule-pagCards.git
